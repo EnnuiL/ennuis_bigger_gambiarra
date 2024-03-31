@@ -11,6 +11,7 @@ version = "$project.version+${libs.versions.minecraft.get()}"
 group = project.maven_group
 
 repositories {
+	// EBI's not released yet! You need local Maven for now until you can use Mavenrinth!
 	mavenLocal()
 	maven { url 'https://maven.terraformersmc.com/releases/' }
 	maven { url 'https://api.modrinth.com/maven' }
