@@ -16,7 +16,7 @@ quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loade
 
 quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
 quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated", version.ref = "quilted_fabric_api" }
-ennuis_bigger_inventories = { module = "io.github.ennuil:ennuis_bigger_inventories", version.ref = "ennuis_bigger_inventories" }
+ennuis_bigger_inventories = { module = "maven.modrinth:ennuis_bigger_inventories", version.ref = "ennuis_bigger_inventories" }
 emi = { module = "dev.emi:emi-fabric", version.ref = "emi" }
 inspecio = { module = "maven.modrinth:inspecio", version.ref = "inspecio" }
 
