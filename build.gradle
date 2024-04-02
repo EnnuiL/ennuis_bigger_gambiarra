@@ -43,6 +43,10 @@ dependencies {
 
 	modCompileOnly libs.inspecio
 	modLocalRuntime libs.inspecio
+
+	// Cloth Config, forget about modLocalRuntime
+	modCompileOnly libs.appleskin
+	//modLocalRuntime libs.appleskin
 }
 
 processResources {

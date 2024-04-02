@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 import java.util.List;
 import java.util.Set;
 
+// TODO - Print a log message when a mod with mixins to be applied is detected
 public class ModMixinPlugin implements IMixinConfigPlugin {
 	private static String mixinPackage;
 

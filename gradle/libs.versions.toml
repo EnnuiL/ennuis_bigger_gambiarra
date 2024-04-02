@@ -8,6 +8,7 @@ quilted_fabric_api = "7.5.0+0.91.0-1.20.1"
 ennuis_bigger_inventories = "0.1.0+1.20.1"
 emi = "1.1.4+1.20.1"
 inspecio = "1.8.1+1.20"
+appleskin = "2.5.1+mc1.20"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
@@ -19,6 +20,7 @@ quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilt
 ennuis_bigger_inventories = { module = "maven.modrinth:ennuis_bigger_inventories", version.ref = "ennuis_bigger_inventories" }
 emi = { module = "dev.emi:emi-fabric", version.ref = "emi" }
 inspecio = { module = "maven.modrinth:inspecio", version.ref = "inspecio" }
+appleskin = { module = "maven.modrinth:appleskin", version.ref = "appleskin" }
 
 # If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
 [bundles]

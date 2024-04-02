@@ -15,6 +15,7 @@
     "emi.accessors.StonecutterScreenHandlerAccessor"
   ],
   "client": [
+    "appleskin.client.HudOverlayHandlerMixin",
     "inspecio.client.InspecioMixin",
     "inspecio.client.InventoryTooltipComponentMixin"
   ],
