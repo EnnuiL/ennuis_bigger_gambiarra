@@ -1,0 +1,23 @@
+{
+	"schemaVersion": 1,
+	"id": "ennuis_bigger_gambiarra",
+	"version": "${version}",
+	"name": "Ennui's Bigger Gambiarra",
+	"description": "A messy workaround (a.k.a. uma gambiarra) that adds compatibility with Ennui's Bigger Inventories to certain mods.",
+	"authors": [
+		"Ennui Langeweile"
+	],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/ennuis_bigger_gambiarra",
+    "issues": "https://github.com/EnnuiL/ennuis_bigger_gambiarra/issues",
+    "sources": "https://github.com/EnnuiL/ennuis_bigger_gambiarra"
+  },
+	"icon": "assets/ennuis_bigger_gambiarra/icon.png",
+	"environment": "*",
+	"mixins": ["ennuis_bigger_gambiarra.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"fabric-api": ">=0.100.3"
+	}
+}

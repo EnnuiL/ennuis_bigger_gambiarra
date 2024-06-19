@@ -1,7 +1,7 @@
 package io.github.ennuil.ennuis_bigger_gambiarra;
 
+import net.fabricmc.loader.api.FabricLoader;
 import org.objectweb.asm.tree.ClassNode;
-import org.quiltmc.loader.api.QuiltLoader;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
@@ -28,7 +28,7 @@ public class ModMixinPlugin implements IMixinConfigPlugin {
 			var id = mixinClassName.substring(mixinPackage.length());
 			id = id.substring(1, id.indexOf('.', 1));
 
-			return id.equals("common") || QuiltLoader.isModLoaded(id);
+			return id.equals("common") || FabricLoader.getInstance().isModLoaded(id);
 		}
 
 		return true;
