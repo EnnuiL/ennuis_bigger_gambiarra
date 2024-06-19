@@ -11,8 +11,6 @@ version = "$project.version+${libs.versions.minecraft.get()}"
 group = project.maven_group
 
 repositories {
-	// EBI's not released yet! You need local Maven for now until you can use Mavenrinth!
-	mavenLocal()
 	maven { url 'https://maven.terraformersmc.com/releases/' }
 	maven { url 'https://api.modrinth.com/maven' }
 }
@@ -33,20 +31,13 @@ dependencies {
 	modImplementation libs.quilt.loader
 
 	// Grumble grumble grumble..
-	modImplementation libs.bundles.quilted.fabric.api
+	modImplementation libs.fabric.api
 
 	modCompileOnly libs.ennuis.bigger.inventories
 	modLocalRuntime libs.ennuis.bigger.inventories
 
 	modCompileOnly libs.emi
 	modLocalRuntime libs.emi
-
-	modCompileOnly libs.inspecio
-	modLocalRuntime libs.inspecio
-
-	// Cloth Config, forget about modLocalRuntime
-	modCompileOnly libs.appleskin
-	//modLocalRuntime libs.appleskin
 }
 
 processResources {
@@ -58,16 +49,10 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.encoding = 'UTF-8'
-	// Minecraft 1.18 (1.18-pre2) upwards uses Java 17.
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
-	// Still required by IDEs such as Eclipse and Visual Studio Code
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
-
 	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task if it is present.
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()

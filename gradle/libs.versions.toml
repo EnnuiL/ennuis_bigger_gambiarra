@@ -1,30 +1,25 @@
 [versions]
 # The latest versions are available at https://lambdaurora.dev/tools/import_quilt.html
-minecraft = "1.20.1"
-quilt_mappings = "1.20.1+build.23"
-quilt_loader = "0.24.0"
+minecraft = "1.21"
+quilt_mappings = "1.21+build.2"
 
-quilted_fabric_api = "7.5.0+0.91.0-1.20.1"
-ennuis_bigger_inventories = "0.1.0+1.20.1"
-emi = "1.1.4+1.20.1"
-inspecio = "1.8.1+1.20"
-appleskin = "2.5.1+mc1.20"
+quilt_loom = "1.6.8"
+quilt_loader = "0.26.0"
+
+fabric_api = "0.100.3+1.21"
+ennuis_bigger_inventories = "0.2.0-beta.2+1.21"
+emi = "1.1.7+1.21"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
 quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "quilt_mappings" }
 quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loader" }
 
-quilted_fabric_api = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api", version.ref = "quilted_fabric_api" }
-quilted_fabric_api_deprecated = { module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated", version.ref = "quilted_fabric_api" }
+fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }
 ennuis_bigger_inventories = { module = "maven.modrinth:ennuis_bigger_inventories", version.ref = "ennuis_bigger_inventories" }
 emi = { module = "dev.emi:emi-fabric", version.ref = "emi" }
-inspecio = { module = "maven.modrinth:inspecio", version.ref = "inspecio" }
-appleskin = { module = "maven.modrinth:appleskin", version.ref = "appleskin" }
 
-# If you have multiple similar dependencies, you can declare a dependency bundle and reference it on the build script with "libs.bundles.example".
 [bundles]
-quilted_fabric_api = ["quilted_fabric_api", "quilted_fabric_api_deprecated"]
 
 [plugins]
-quilt_loom = { id = "org.quiltmc.loom", version = "1.5.7" }
+quilt_loom = { id = "org.quiltmc.loom", version.ref = "quilt_loom" }

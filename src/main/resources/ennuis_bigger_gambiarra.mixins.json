@@ -14,11 +14,6 @@
     "emi.accessors.PlayerScreenHandlerAccessor",
     "emi.accessors.StonecutterScreenHandlerAccessor"
   ],
-  "client": [
-    "appleskin.client.HudOverlayHandlerMixin",
-    "inspecio.client.InspecioMixin",
-    "inspecio.client.InventoryTooltipComponentMixin"
-  ],
   "injectors": {
     "defaultRequire": 1
 	}
