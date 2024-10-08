@@ -13,6 +13,9 @@ trim_trailing_whitespace = false
 [*.gradle]
 indent_style = tab
 
+[*.gradle.kts]
+indent_style = tab
+
 [*.java]
 indent_style = tab
 
