@@ -12,7 +12,19 @@ group = project.maven_group
 
 repositories {
 	maven { url 'https://maven.terraformersmc.com/releases/' }
-	maven { url 'https://api.modrinth.com/maven' }
+	repositories {
+		exclusiveContent {
+			forRepository {
+				maven {
+					name = "Modrinth"
+					url = "https://api.modrinth.com/maven"
+				}
+			}
+			filter {
+				includeGroup "maven.modrinth"
+			}
+		}
+	}
 }
 
 loom {
