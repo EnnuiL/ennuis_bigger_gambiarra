@@ -20,6 +20,7 @@ loom {
 
 repositories {
 	maven(uri("https://maven.terraformersmc.com/releases/"))
+	maven(uri("https://maven.blamejared.com/"))
 	exclusiveContent {
 		forRepository {
 			maven(uri("https://api.modrinth.com/maven"))
@@ -40,11 +41,15 @@ dependencies {
 	modCompileOnly(libs.ennuis.bigger.inventories)
 	modLocalRuntime(libs.ennuis.bigger.inventories)
 
+	modCompileOnly(libs.jei)
+	//modLocalRuntime(libs.jei)
+
 	modCompileOnly(libs.emi)
 	modLocalRuntime(libs.emi)
 }
 
-tasks.processResources {
+tasks.named<ProcessResources>("processResources").configure {
+	var version = project.version
 	inputs.property("version", version)
 
 	filesMatching("fabric.mod.json") {
@@ -67,9 +72,13 @@ java {
 }
 
 // If you plan to use a different file for the license, don't forget to change the file name here!
-tasks.jar {
+tasks.named<Jar>("jar").configure {
+	var name = project.name
+	inputs.files("LICENSE.md")
+	inputs.property("name", name)
+
 	from("LICENSE.md") {
-		rename { "${it}_${base.archivesName.get()}" }
+		rename { "LICENSE_${name}.md" }
 	}
 }
 

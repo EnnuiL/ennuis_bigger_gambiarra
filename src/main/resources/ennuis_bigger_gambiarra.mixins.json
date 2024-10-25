@@ -12,7 +12,8 @@
     "emi.accessors.AbstractFurnaceScreenHandlerAccessor",
     "emi.accessors.CraftingScreenHandlerAccessor",
     "emi.accessors.PlayerScreenHandlerAccessor",
-    "emi.accessors.StonecutterScreenHandlerAccessor"
+    "emi.accessors.StonecutterScreenHandlerAccessor",
+    "jei.PlayerRecipeTransferHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
