@@ -49,7 +49,7 @@ dependencies {
 }
 
 tasks.named<ProcessResources>("processResources").configure {
-	var version = project.version
+	val version = project.version
 	inputs.property("version", version)
 
 	filesMatching("fabric.mod.json") {
@@ -73,7 +73,7 @@ java {
 
 // If you plan to use a different file for the license, don't forget to change the file name here!
 tasks.named<Jar>("jar").configure {
-	var name = project.name
+	val name = project.name
 	inputs.files("LICENSE.md")
 	inputs.property("name", name)
 
