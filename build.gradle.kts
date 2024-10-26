@@ -3,7 +3,7 @@ plugins {
 	alias(libs.plugins.quilt.loom)
 }
 
-project.version = "0.3.0+1.21.1"
+project.version = "0.4.0+1.21.1"
 project.group = "io.github.ennuil"
 
 loom {
