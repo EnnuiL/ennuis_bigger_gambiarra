@@ -13,7 +13,7 @@
     "emi.accessors.CraftingScreenHandlerAccessor",
     "emi.accessors.PlayerScreenHandlerAccessor",
     "emi.accessors.StonecutterScreenHandlerAccessor",
-    "jei.PlayerRecipeTransferHandlerMixin"
+    "jei.BasicRecipeTransferInfoMixin"
   ],
   "injectors": {
     "defaultRequire": 1
