@@ -1,9 +1,9 @@
 plugins {
 	id("maven-publish")
-	alias(libs.plugins.quilt.loom)
+	alias(libs.plugins.fabric.loom)
 }
 
-project.version = "0.4.0+1.21.1"
+project.version = "0.5.0+1.21.1"
 project.group = "io.github.ennuil"
 
 loom {
@@ -19,11 +19,13 @@ loom {
 }
 
 repositories {
-	maven(uri("https://maven.terraformersmc.com/releases/"))
-	maven(uri("https://maven.blamejared.com/"))
+	maven("https://maven.parchmentmc.org")
+	maven("https://maven.terraformersmc.com/releases/")
+	maven("https://maven.blamejared.com/")
+	maven("https://maven.wispforest.io/releases")
 	exclusiveContent {
 		forRepository {
-			maven(uri("https://api.modrinth.com/maven"))
+			maven("https://api.modrinth.com/maven")
 		}
 		filter {
 			includeGroup("maven.modrinth")
@@ -33,19 +35,28 @@ repositories {
 
 dependencies {
 	minecraft(libs.minecraft)
-	mappings(variantOf(libs.quilt.mappings) { classifier("intermediary-v2") })
-	modImplementation(libs.quilt.loader)
+	mappings(loom.layered {
+		officialMojangMappings()
+		parchment(libs.parchment)
+	})
+	modImplementation(libs.fabric.loader)
 
 	modImplementation(libs.fabric.api)
 
 	modCompileOnly(libs.ennuis.bigger.inventories)
 	modLocalRuntime(libs.ennuis.bigger.inventories)
 
+	// JEI on runtime is fine because EMI will eat it
 	modCompileOnly(libs.jei)
 	//modLocalRuntime(libs.jei)
 
 	modCompileOnly(libs.emi)
 	modLocalRuntime(libs.emi)
+
+	modCompileOnly(libs.accessories)
+	modLocalRuntime(libs.accessories)
+
+	modCompileOnly(libs.owo.lib)
 }
 
 tasks.named<ProcessResources>("processResources").configure {

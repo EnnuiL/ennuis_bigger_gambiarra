@@ -1,10 +1,8 @@
 package io.github.ennuil.ennuis_bigger_gambiarra.mixin.jei;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import com.llamalad7.mixinextras.sugar.Local;
 import io.github.ennuil.ennuis_bigger_inventories.api.HackjobKit;
 import mezz.jei.library.transfer.BasicRecipeTransferInfo;
-import net.minecraft.screen.ScreenHandler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -19,7 +17,7 @@ public abstract class BasicRecipeTransferInfoMixin {
 		),
 		remap = false
 	)
-	private int modifySlotEnd(int original, @Local(index = 0) ScreenHandler screenHandler) {
+	private int modifySlotEnd(int original) {
 		// This hackjob is generic enough to affect everything that's needed but it might be overreaching!
 		// I recommend EMI for a better experience, but if you really want JEI, I guess we have this ticking time bomb
 		// Do *not* point fingers to JEI's mod authors!!! I'm the one doing the gambiarra in the first place!

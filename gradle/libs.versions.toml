@@ -1,28 +1,33 @@
 # The latest versions are available at https://quiltmc.org/en/usage/latest-versions/
 [versions]
 minecraft = "1.21.1"
-quilt_mappings = "1.21.1+build.3"
+parchment = "2024.11.17"
 
-quilt_loom = "1.8.4"
-quilt_loader = "0.27.0-beta.1"
+fabric_loom = "1.10.1"
+fabric_loader = "0.16.10"
 
-fabric_api = "0.106.0+1.21.1"
-ennuis_bigger_inventories = "0.2.0-beta.3+1.21"
+fabric_api = "0.115.0+1.21.1"
+ennuis_bigger_inventories = "0.2.0-beta.5+1.21.1"
 # Keep your friends closer and keep your rivals uh, close to each other???
-emi = "1.1.16+1.21.1"
-jei = "19.21.0.246"
+emi = "1.1.19+1.21.1"
+jei = "19.21.0.247"
+# Freaky mod; I should use their language: "Freakinator Mod!!! xd"
+accessories = "1.1.0-beta.26+1.21.1"
+owo_lib = "0.12.15+1.21"
 
 [libraries]
 minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
-quilt_mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "quilt_mappings" }
-quilt_loader = { module = "org.quiltmc:quilt-loader", version.ref = "quilt_loader" }
+parchment = { module = "org.parchmentmc.data:parchment-1.21.1", version.ref = "parchment" }
+fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
 
 fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }
 ennuis_bigger_inventories = { module = "maven.modrinth:ennuis_bigger_inventories", version.ref = "ennuis_bigger_inventories" }
 emi = { module = "dev.emi:emi-fabric", version.ref = "emi" }
 jei = { module = "mezz.jei:jei-1.21.1-fabric", version.ref = "jei" }
+accessories = { module = "io.wispforest:accessories-fabric", version.ref = "accessories" }
+owo_lib = { module = "io.wispforest:owo-lib", version.ref = "owo-lib" }
 
 [bundles]
 
 [plugins]
-quilt_loom = { id = "org.quiltmc.loom", version.ref = "quilt_loom" }
+fabric_loom = { id = "fabric-loom", version.ref = "fabric_loom" }

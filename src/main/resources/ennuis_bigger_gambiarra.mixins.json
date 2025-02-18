@@ -3,19 +3,30 @@
   "minVersion": "0.8",
   "package": "io.github.ennuil.ennuis_bigger_gambiarra.mixin",
   "plugin": "io.github.ennuil.ennuis_bigger_gambiarra.ModMixinPlugin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "accessories.AccessoriesClientMixin",
+    "accessories.AccessoriesExperimentalMenuMixin",
+    "accessories.AccessoriesMenuMixin",
+    "accessories.ComponentUtilsMixin",
+    "accessories.EquipmentSlotBasedContainerMixin",
+    "accessories.SlotAccessContainerMixin",
     "emi.CookingRecipeHandlerMixin",
     "emi.CraftingRecipeHandlerMixin",
     "emi.InventoryRecipeHandlerMixin",
     "emi.StonecuttingRecipeHandlerMixin",
-    "emi.accessors.AbstractFurnaceScreenHandlerAccessor",
-    "emi.accessors.CraftingScreenHandlerAccessor",
-    "emi.accessors.PlayerScreenHandlerAccessor",
-    "emi.accessors.StonecutterScreenHandlerAccessor",
-    "jei.BasicRecipeTransferInfoMixin"
+    "emi.accessors.AbstractFurnaceMenuAccessor",
+    "emi.accessors.CraftingMenuAccessor",
+    "emi.accessors.InventoryMenuAccessor",
+    "emi.accessors.StonecutterMenuAccessor",
+    "jei.BasicRecipeTransferInfoMixin",
+    "owo.SlotGeneratorMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-	}
+  },
+  "client": [
+    "accessories.AccessoriesExperimentalScreenMixin",
+    "accessories.AccessoriesScreenMixin"
+  ]
 }
