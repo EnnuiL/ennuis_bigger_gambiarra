@@ -25,7 +25,7 @@ ennuis_bigger_inventories = { module = "maven.modrinth:ennuis_bigger_inventories
 emi = { module = "dev.emi:emi-fabric", version.ref = "emi" }
 jei = { module = "mezz.jei:jei-1.21.1-fabric", version.ref = "jei" }
 accessories = { module = "io.wispforest:accessories-fabric", version.ref = "accessories" }
-owo_lib = { module = "io.wispforest:owo-lib", version.ref = "owo-lib" }
+owo_lib = { module = "io.wispforest:owo-lib", version.ref = "owo_lib" }
 
 [bundles]
 

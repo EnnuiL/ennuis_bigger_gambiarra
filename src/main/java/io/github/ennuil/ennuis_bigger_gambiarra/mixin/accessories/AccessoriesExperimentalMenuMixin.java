@@ -61,7 +61,9 @@ public abstract class AccessoriesExperimentalMenuMixin extends AccessoriesMenuBa
 		at = @At(
 			value = "CONSTANT",
 			args = "intValue=45"
-		)
+		),
+		// Fixes newer (and unpublished on Maven) versions of Accessories
+		require = 0
 	)
 	private int modifyPlayerInvOffset4(int original) {
 		return this.owner.getInventory().isTenfoursized() ? 49 : original;
